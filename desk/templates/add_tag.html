@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-9 offset-md-2">
+
+    <div class="container">
+        <h2 class="mb-4">Add your tags:</h2>
+    </div>
+
+    <form class="form-group" method="post">
+        <div class="form-group mb-2">
+            <input type="text" class="form-control" id="your_tag" placeholder="Tags" name="tags" required>
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Apply</button>
+    </form>
+</div>
+{% endblock %}

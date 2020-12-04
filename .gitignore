@@ -1,0 +1,6 @@
+/env/
+/.idea/
+/main.py
+*.pyc
+.idea
+.env

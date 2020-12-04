@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-9 offset-md-2">
+    <h2 class="mb-4">Fill the form</h2>
+    <form class="form-group" action="/make_ad" method="post">
+        <div class="form-group mb-2">
+            <label for="your_title">Title</label>
+            <input type="text" class="form-control" id="your_title" placeholder="Title" name="title" required>
+        </div>
+        <div class="form-group mb-2">
+            <label for="your_tag">Tags:</label>
+            <input type="text" class="form-control" id="your_tag" placeholder="Tags" name="tags" required>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Ad</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Your ad" name="ad"></textarea>
+        </div>
+      <button type="submit" class="btn btn-primary mb-2">Apply</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="col-9 offset-md-2">
+    <div class="container">
+        <h2 class="mb-2">Statistics:</h2>
+        <h3 class="mb-1">id: {{ stat['r_id'] }}:</h3>
+        <h3 class="mb-1">tags: {{ stat['r_tags'] }}</h3>
+        <h3 class="mb-1">Comments: {{ stat['r_comments'] }}</h3>
+    </div>
+
+    <div class="card mb-4 mr-4" style="width: 31rem;">
+        <div class="card-body">
+            <h5 class="card-title">{{ ad['title'] }}</h5>
+            <h6 class="container row card-subtitle text-muted">
+                {% for tag in ad['tags'] %}
+                    <div class="mr-1">{{ tag }}</div>
+                {% endfor %}
+            </h6>
+            <p class="card-text mt-2 mb-2">{{ ad['ad'] }}</p>
+            <p class="card-text mb-1">Comments:</p>
+            <div class="card overflow-auto mb-3" style="max-height: 100px;">
+                {% for comment in ad['comments'] %}
+                    <p class="card-text">{{ comment }}</p>
+                {% endfor %}
+            </div>
+            <a href="{{url_for('index')}}" class="card-link">Back</a>
+        </div>
+    </div>
+
+{% endblock %}

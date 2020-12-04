@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="mb-4">Ads desk:</h2>
+    </div>
+
+    {% for ad in ads %}
+    <div class="card mb-4 mr-4" style="width: 31rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ ad['title'] }}</h5>
+                    <h6 class="container row card-subtitle text-muted">
+                        {% for tag in ad['tags'] %}
+                            <div class="mr-1">{{ tag }}</div>
+                        {% endfor %}
+                    </h6>
+                    <p class="card-text mt-2 mb-2">{{ ad['ad'] }}</p>
+                    <p class="card-text mb-1">Comments:</p>
+                    <div class="card overflow-auto mb-3" style="max-height: 100px;">
+                        {% for comment in ad['comments'] %}
+                            <p class="card-text">{{ comment }}</p>
+                        {% endfor %}
+                    </div>
+                    <a href="/add_tag/{{ad['_id']}}" class="card-link">Add Tag</a>
+                    <a href="/add_comment/{{ad['_id']}}" class="card-link">Add comment</a>
+                    <a href="/statistics/{{ad['_id']}}" class="card-link text-danger">Statistics</a>
+                </div>
+            </div>
+    {% endfor %}
+
+{% endblock %}
