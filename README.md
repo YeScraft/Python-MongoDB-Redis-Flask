@@ -1,4 +1,4 @@
-# Skillfactory-module-e7_11-YeSergey (Сервис с mongodb и кэшем Python, MongoDB, Redis)
+# Skillfactory-module-e7_11-YeSergey (Сервис с mongodb и кэшем Python, MongoDB, Redis, Flask)
 Для работы с приложением:
 1. Скачайте приложение.
 2. В cmd ввести: cd путь до папки с проектом;
